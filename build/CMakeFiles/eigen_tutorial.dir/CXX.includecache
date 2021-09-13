@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/u/kelleher/fall2021/cs393r/cs393r_starter/src/eigen_tutorial.cc
+stdio.h
+-
+iostream
+-
+cmath
+-
+eigen3/Eigen/Dense
+/u/kelleher/fall2021/cs393r/cs393r_starter/src/eigen3/Eigen/Dense
+eigen3/Eigen/Geometry
+/u/kelleher/fall2021/cs393r/cs393r_starter/src/eigen3/Eigen/Geometry
+
