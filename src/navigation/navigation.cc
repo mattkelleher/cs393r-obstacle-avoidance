@@ -62,7 +62,7 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
     robot_vel_(0, 0),
     robot_omega_(0),
     nav_complete_(true),
-    nav_goal_loc_(0, 0),
+    nav_goal_loc_(7, 0),
     nav_goal_angle_(0) {
   drive_pub_ = n->advertise<AckermannCurvatureDriveMsg>(
       "ackermann_curvature_drive", 1);
@@ -75,6 +75,8 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
 }
 
 void Navigation::SetNavGoal(const Vector2f& loc, float angle) {
+  nav_goal_loc_ = loc;
+  nav_goal_angle_ = angle;
 }
 
 void Navigation::UpdateLocation(const Eigen::Vector2f& loc, float angle) {
@@ -106,6 +108,20 @@ void Navigation::ObservePointCloud(const vector<Vector2f>& cloud,
   point_cloud_ = cloud;                                     
 }
 
+int Navigation::_FindCollision(int theta) {
+  std::cout << "##############################################" << std::endl;
+  for(auto point: point_cloud_) {
+    std::cout << "point at: " << point.x() << " " << point.y() << std::endl; 
+  }
+  return 1;
+}
+
+int Navigation::_Score(int freePathLength, Vector2f endPoint) {
+  // TODO potentially add hyperparameter to navigation class to weight score
+  return freePathLength - sqrt(pow(endPoint.x() - nav_goal_loc_.x(), 2)
+	       + pow(endPoint.y() - nav_goal_loc_.y(), 2)); 
+}
+
 void Navigation::Run() {
   // This function gets called 20 times a second to form the control loop.
   
@@ -118,11 +134,12 @@ void Navigation::Run() {
 
   // The control iteration goes here. 
   // Feel free to make helper functions to structure the control appropriately.
-  
+   
   // The latest observed point cloud is accessible via "point_cloud_"
+  //_FindCollision(5);
 
   // Eventually, you will have to set the control values to issue drive commands:
-  drive_msg_.curvature = 10;
+  drive_msg_.curvature = 0;
   drive_msg_.velocity = 1;
 
   // Add timestamps to all messages.

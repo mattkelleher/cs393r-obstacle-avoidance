@@ -59,6 +59,11 @@ class Navigation {
   // Updates based on an observed laser scan
   void ObservePointCloud(const std::vector<Eigen::Vector2f>& cloud,
                          double time);
+  
+  // Finds the first point the car will hit on arc theta
+  int _FindCollision(int theta);
+  // Retruns the score of a moving along a given arc
+  int _Score(int freePathLength, Eigen::Vector2f endPoint);
 
   // Main function called continously from main
   void Run();
