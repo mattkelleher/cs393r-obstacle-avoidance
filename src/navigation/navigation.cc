@@ -108,7 +108,7 @@ void Navigation::ObservePointCloud(const vector<Vector2f>& cloud,
   point_cloud_ = cloud;                                     
 }
 
-int Navigation::_FindCollision(int theta) {
+int Navigation::_FindCollision(int r) {
   std::cout << "##############################################" << std::endl;
   for(auto point: point_cloud_) {
     std::cout << "point at: " << point.x() << " " << point.y() << std::endl; 

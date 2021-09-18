@@ -61,7 +61,7 @@ class Navigation {
                          double time);
   
   // Finds the first point the car will hit on arc theta
-  int _FindCollision(int theta);
+  int _FindCollision(int r);
   // Retruns the score of a moving along a given arc
   int _Score(int freePathLength, Eigen::Vector2f endPoint);
 
