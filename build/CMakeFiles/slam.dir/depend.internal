@@ -7,8 +7,8 @@ CMakeFiles/slam.dir/src/slam/slam.cc.o
  ../src/shared/math/math_util.h
  ../src/shared/util/timer.h
  ../src/vector_map/vector_map.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.h
 CMakeFiles/slam.dir/src/slam/slam_main.cc.o
  ../src/config_reader/config_reader.h
  ../src/config_reader/lua_script.h
@@ -129,5 +129,5 @@ CMakeFiles/slam.dir/src/slam/slam_main.cc.o
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Point2D.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Pose2Df.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/VisualizationMsg.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam_main.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam_main.cc

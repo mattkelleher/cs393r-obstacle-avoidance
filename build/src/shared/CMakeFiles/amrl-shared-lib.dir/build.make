@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 # Include any dependencies generated for this target.
 include src/shared/CMakeFiles/amrl-shared-lib.dir/depend.make
@@ -59,16 +59,16 @@ include src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o: src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o: ../src/shared/util/helpers.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc > CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc > CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc -o CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc -o CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o.requires:
 
@@ -83,16 +83,16 @@ src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o.provides.build: src/
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o: src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o: ../src/shared/util/pthread_utils.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc > CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc > CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc -o CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc -o CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o.requires:
 
@@ -107,16 +107,16 @@ src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o.provides.build
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o: src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o: ../src/shared/util/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc > CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc > CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc -o CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc -o CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o.requires:
 
@@ -131,16 +131,16 @@ src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o.provides.build: src/sh
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o: src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o: ../src/shared/util/random.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/random.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/random.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/amrl-shared-lib.dir/util/random.cc.i"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc > CMakeFiles/amrl-shared-lib.dir/util/random.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc > CMakeFiles/amrl-shared-lib.dir/util/random.cc.i
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/amrl-shared-lib.dir/util/random.cc.s"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc -o CMakeFiles/amrl-shared-lib.dir/util/random.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc -o CMakeFiles/amrl-shared-lib.dir/util/random.cc.s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o.requires:
 
@@ -155,16 +155,16 @@ src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o.provides.build: src/s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o: src/shared/CMakeFiles/amrl-shared-lib.dir/flags.make
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o: ../src/shared/util/terminal_colors.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc > CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc > CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc -o CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc -o CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o.requires:
 
@@ -195,8 +195,8 @@ amrl__shared__lib_EXTERNAL_OBJECTS =
 ../lib/libamrl-shared-lib.so: src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o
 ../lib/libamrl-shared-lib.so: src/shared/CMakeFiles/amrl-shared-lib.dir/build.make
 ../lib/libamrl-shared-lib.so: src/shared/CMakeFiles/amrl-shared-lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../../../lib/libamrl-shared-lib.so"
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/amrl-shared-lib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../../../lib/libamrl-shared-lib.so"
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/amrl-shared-lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/shared/CMakeFiles/amrl-shared-lib.dir/build: ../lib/libamrl-shared-lib.so
@@ -212,10 +212,10 @@ src/shared/CMakeFiles/amrl-shared-lib.dir/requires: src/shared/CMakeFiles/amrl-s
 .PHONY : src/shared/CMakeFiles/amrl-shared-lib.dir/requires
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/clean:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/amrl-shared-lib.dir/cmake_clean.cmake
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared && $(CMAKE_COMMAND) -P CMakeFiles/amrl-shared-lib.dir/cmake_clean.cmake
 .PHONY : src/shared/CMakeFiles/amrl-shared-lib.dir/clean
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/shared/CMakeFiles/amrl-shared-lib.dir/depend
 

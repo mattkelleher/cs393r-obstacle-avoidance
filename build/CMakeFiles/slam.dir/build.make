@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/slam.dir/depend.make
@@ -123,16 +123,16 @@ CMakeFiles/slam.dir/src/slam/slam_main.cc.o: /u/kelleher/ut_automata/manifest.xm
 CMakeFiles/slam.dir/src/slam/slam_main.cc.o: /u/kelleher/amrl_msgs/msg_gen/generated
 CMakeFiles/slam.dir/src/slam/slam_main.cc.o: /u/kelleher/amrl_msgs/srv_gen/generated
 CMakeFiles/slam.dir/src/slam/slam_main.cc.o: /u/kelleher/ut_automata/msg_gen/generated
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slam.dir/src/slam/slam_main.cc.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/src/slam/slam_main.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slam.dir/src/slam/slam_main.cc.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/src/slam/slam_main.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam_main.cc
 
 CMakeFiles/slam.dir/src/slam/slam_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/slam/slam_main.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam_main.cc > CMakeFiles/slam.dir/src/slam/slam_main.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam_main.cc > CMakeFiles/slam.dir/src/slam/slam_main.cc.i
 
 CMakeFiles/slam.dir/src/slam/slam_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/slam/slam_main.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam_main.cc -o CMakeFiles/slam.dir/src/slam/slam_main.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam_main.cc -o CMakeFiles/slam.dir/src/slam/slam_main.cc.s
 
 CMakeFiles/slam.dir/src/slam/slam_main.cc.o.requires:
 
@@ -211,16 +211,16 @@ CMakeFiles/slam.dir/src/slam/slam.cc.o: /u/kelleher/ut_automata/manifest.xml
 CMakeFiles/slam.dir/src/slam/slam.cc.o: /u/kelleher/amrl_msgs/msg_gen/generated
 CMakeFiles/slam.dir/src/slam/slam.cc.o: /u/kelleher/amrl_msgs/srv_gen/generated
 CMakeFiles/slam.dir/src/slam/slam.cc.o: /u/kelleher/ut_automata/msg_gen/generated
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slam.dir/src/slam/slam.cc.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/src/slam/slam.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slam.dir/src/slam/slam.cc.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/src/slam/slam.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.cc
 
 CMakeFiles/slam.dir/src/slam/slam.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/src/slam/slam.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.cc > CMakeFiles/slam.dir/src/slam/slam.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.cc > CMakeFiles/slam.dir/src/slam/slam.cc.i
 
 CMakeFiles/slam.dir/src/slam/slam.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/src/slam/slam.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.cc -o CMakeFiles/slam.dir/src/slam/slam.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.cc -o CMakeFiles/slam.dir/src/slam/slam.cc.s
 
 CMakeFiles/slam.dir/src/slam/slam.cc.o.requires:
 
@@ -247,7 +247,7 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: ../lib/libshared_library.so
 ../bin/slam: ../lib/libamrl-shared-lib.so
 ../bin/slam: CMakeFiles/slam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/slam"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/slam"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slam.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -265,6 +265,6 @@ CMakeFiles/slam.dir/clean:
 .PHONY : CMakeFiles/slam.dir/clean
 
 CMakeFiles/slam.dir/depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/slam.dir/depend
 

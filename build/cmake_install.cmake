@@ -1,4 +1,4 @@
-# Install script for directory: /u/kelleher/fall2021/cs393r/cs393r_starter
+# Install script for directory: /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -56,7 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -68,7 +68,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -81,8 +81,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/setup.bash"
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/local_setup.bash"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/setup.bash"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
@@ -96,8 +96,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/setup.sh"
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/local_setup.sh"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/setup.sh"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
@@ -111,8 +111,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
 file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/setup.zsh"
-    "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/local_setup.zsh"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/setup.zsh"
+    "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
@@ -125,13 +125,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/u/kelleher/fall2021/cs393r/cs393r_starter/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/u/kelleher/fall2021/cs393r/cs393r_starter/build/gtest/cmake_install.cmake")
-  include("/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/cmake_install.cmake")
+  include("/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/gtest/cmake_install.cmake")
+  include("/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/cmake_install.cmake")
 
 endif()
 
@@ -143,5 +143,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/u/kelleher/fall2021/cs393r/cs393r_starter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

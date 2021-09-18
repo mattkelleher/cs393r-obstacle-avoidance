@@ -32,9 +32,9 @@ stdint.h
 string
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc
 util/helpers.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/util/helpers.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/util/helpers.h
 execinfo.h
 -
 stdio.h
@@ -58,39 +58,39 @@ utility
 vector
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc
 pthread.h
 -
 stdio.h
 -
 util/pthread_utils.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/util/pthread_utils.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/util/pthread_utils.h
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc
 random.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.h
 random
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.h
 random
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc
 stdio.h
 -
 vector
 -
 terminal_colors.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.h
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.h
 vector
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc
 util/timer.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/util/timer.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/util/timer.h
 inttypes.h
 -
 time.h

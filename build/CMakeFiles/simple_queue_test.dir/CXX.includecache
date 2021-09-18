@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/simple_queue.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/simple_queue.h
 algorithm
 -
 deque
@@ -14,11 +14,11 @@ deque
 utility
 -
 
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/simple_queue_test.cc
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/simple_queue_test.cc
 stdio.h
 -
 stdint.h
 -
 simple_queue.h
-/u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/simple_queue.h
+/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/simple_queue.h
 

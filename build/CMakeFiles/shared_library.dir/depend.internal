@@ -6,8 +6,8 @@ CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o
  ../src/shared/math/line2d.h
  ../src/shared/math/math_util.h
  ../src/shared/util/timer.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/vector_map/vector_map.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/vector_map/vector_map.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/vector_map/vector_map.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/vector_map/vector_map.h
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o
  /opt/ros/melodic/include/ros/advertise_options.h
  /opt/ros/melodic/include/ros/advertise_service_options.h
@@ -75,5 +75,5 @@ CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Point2D.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Pose2Df.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/VisualizationMsg.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/visualization/visualization.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/visualization/visualization.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/visualization/visualization.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/visualization/visualization.h

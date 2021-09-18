@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/lusr/bin/python /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /u/kelleher/fall2021/cs393r/cs393r_starter/build/test_results
+	/lusr/bin/python /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

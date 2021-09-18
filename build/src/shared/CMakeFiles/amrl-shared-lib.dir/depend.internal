@@ -3,16 +3,16 @@
 
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o
  ../src/shared/util/helpers.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o
  ../src/shared/util/pthread_utils.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.h
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.h
 src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o
  ../src/shared/util/timer.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc

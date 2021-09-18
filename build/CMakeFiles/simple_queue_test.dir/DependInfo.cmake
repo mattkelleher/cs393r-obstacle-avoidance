@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/simple_queue_test.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/simple_queue_test.dir/src/navigation/simple_queue_test.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/simple_queue_test.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/simple_queue_test.dir/src/navigation/simple_queue_test.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROS_BUILD_SHARED_LIBS=1"
-  "ROS_PACKAGE_NAME=\"cs393r_starter\""
+  "ROS_PACKAGE_NAME=\"cs393r-obstacle-avoidance\""
   )
 
 # The include file search paths:

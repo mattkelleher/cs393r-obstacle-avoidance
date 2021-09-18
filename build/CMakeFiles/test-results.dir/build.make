@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 # Utility rule file for test-results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
 include CMakeFiles/test-results.dir/progress.make
 
 CMakeFiles/test-results:
-	/opt/ros/melodic/share/rosunit/cmake/../scripts/summarize_results.py --nodeps cs393r_starter
+	/opt/ros/melodic/share/rosunit/cmake/../scripts/summarize_results.py --nodeps cs393r-obstacle-avoidance
 
 test-results: CMakeFiles/test-results
 test-results: CMakeFiles/test-results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 

@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/u/kelleher/fall2021/cs393r/cs393r_starter/build/gtest/googlemock/cmake_install.cmake")
+  include("/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

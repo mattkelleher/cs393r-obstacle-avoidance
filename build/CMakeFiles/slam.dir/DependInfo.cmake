@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/slam.dir/src/slam/slam.cc.o"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/slam/slam_main.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/slam.dir/src/slam/slam_main.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/slam.dir/src/slam/slam.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/slam/slam_main.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/slam.dir/src/slam/slam_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROS_BUILD_SHARED_LIBS=1"
-  "ROS_PACKAGE_NAME=\"cs393r_starter\""
+  "ROS_PACKAGE_NAME=\"cs393r-obstacle-avoidance\""
   )
 
 # The include file search paths:
@@ -28,8 +28,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/shared_library.dir/DependInfo.cmake"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/DependInfo.cmake"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/shared_library.dir/DependInfo.cmake"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

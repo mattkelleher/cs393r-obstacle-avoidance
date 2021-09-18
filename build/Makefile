@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles /u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/progress.marks
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles 0
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/progress.marks
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/clean
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/shared/CMakeFiles/amrl-shared-lib.dir/rule:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/amrl-shared-lib.dir/rule
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f CMakeFiles/Makefile2 src/shared/CMakeFiles/amrl-shared-lib.dir/rule
 .PHONY : src/shared/CMakeFiles/amrl-shared-lib.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ amrl-shared-lib: src/shared/CMakeFiles/amrl-shared-lib.dir/rule
 
 # fast build rule for target.
 amrl-shared-lib/fast:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/build
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/build
 .PHONY : amrl-shared-lib/fast
 
 util/helpers.o: util/helpers.cc.o
@@ -177,7 +177,7 @@ util/helpers.o: util/helpers.cc.o
 
 # target to build an object file
 util/helpers.cc.o:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o
 .PHONY : util/helpers.cc.o
 
 util/helpers.i: util/helpers.cc.i
@@ -186,7 +186,7 @@ util/helpers.i: util/helpers.cc.i
 
 # target to preprocess a source file
 util/helpers.cc.i:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.i
 .PHONY : util/helpers.cc.i
 
 util/helpers.s: util/helpers.cc.s
@@ -195,7 +195,7 @@ util/helpers.s: util/helpers.cc.s
 
 # target to generate assembly for a file
 util/helpers.cc.s:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.s
 .PHONY : util/helpers.cc.s
 
 util/pthread_utils.o: util/pthread_utils.cc.o
@@ -204,7 +204,7 @@ util/pthread_utils.o: util/pthread_utils.cc.o
 
 # target to build an object file
 util/pthread_utils.cc.o:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o
 .PHONY : util/pthread_utils.cc.o
 
 util/pthread_utils.i: util/pthread_utils.cc.i
@@ -213,7 +213,7 @@ util/pthread_utils.i: util/pthread_utils.cc.i
 
 # target to preprocess a source file
 util/pthread_utils.cc.i:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.i
 .PHONY : util/pthread_utils.cc.i
 
 util/pthread_utils.s: util/pthread_utils.cc.s
@@ -222,7 +222,7 @@ util/pthread_utils.s: util/pthread_utils.cc.s
 
 # target to generate assembly for a file
 util/pthread_utils.cc.s:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.s
 .PHONY : util/pthread_utils.cc.s
 
 util/random.o: util/random.cc.o
@@ -231,7 +231,7 @@ util/random.o: util/random.cc.o
 
 # target to build an object file
 util/random.cc.o:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o
 .PHONY : util/random.cc.o
 
 util/random.i: util/random.cc.i
@@ -240,7 +240,7 @@ util/random.i: util/random.cc.i
 
 # target to preprocess a source file
 util/random.cc.i:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.i
 .PHONY : util/random.cc.i
 
 util/random.s: util/random.cc.s
@@ -249,7 +249,7 @@ util/random.s: util/random.cc.s
 
 # target to generate assembly for a file
 util/random.cc.s:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.s
 .PHONY : util/random.cc.s
 
 util/terminal_colors.o: util/terminal_colors.cc.o
@@ -258,7 +258,7 @@ util/terminal_colors.o: util/terminal_colors.cc.o
 
 # target to build an object file
 util/terminal_colors.cc.o:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o
 .PHONY : util/terminal_colors.cc.o
 
 util/terminal_colors.i: util/terminal_colors.cc.i
@@ -267,7 +267,7 @@ util/terminal_colors.i: util/terminal_colors.cc.i
 
 # target to preprocess a source file
 util/terminal_colors.cc.i:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.i
 .PHONY : util/terminal_colors.cc.i
 
 util/terminal_colors.s: util/terminal_colors.cc.s
@@ -276,7 +276,7 @@ util/terminal_colors.s: util/terminal_colors.cc.s
 
 # target to generate assembly for a file
 util/terminal_colors.cc.s:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.s
 .PHONY : util/terminal_colors.cc.s
 
 util/timer.o: util/timer.cc.o
@@ -285,7 +285,7 @@ util/timer.o: util/timer.cc.o
 
 # target to build an object file
 util/timer.cc.o:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o
 .PHONY : util/timer.cc.o
 
 util/timer.i: util/timer.cc.i
@@ -294,7 +294,7 @@ util/timer.i: util/timer.cc.i
 
 # target to preprocess a source file
 util/timer.cc.i:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.i
 .PHONY : util/timer.cc.i
 
 util/timer.s: util/timer.cc.s
@@ -303,7 +303,7 @@ util/timer.s: util/timer.cc.s
 
 # target to generate assembly for a file
 util/timer.cc.s:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(MAKE) -f src/shared/CMakeFiles/amrl-shared-lib.dir/build.make src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.s
 .PHONY : util/timer.cc.s
 
 # Help Target
@@ -345,6 +345,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

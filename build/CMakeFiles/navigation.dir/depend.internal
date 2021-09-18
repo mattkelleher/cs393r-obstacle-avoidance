@@ -79,8 +79,8 @@ CMakeFiles/navigation.dir/src/navigation/navigation.cc.o
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Point2D.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Pose2Df.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/VisualizationMsg.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/navigation.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/navigation.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/navigation.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/navigation.h
 CMakeFiles/navigation.dir/src/navigation/navigation_main.cc.o
  ../src/shared/math/math_util.h
  ../src/shared/ros/ros_helpers.h
@@ -162,5 +162,5 @@ CMakeFiles/navigation.dir/src/navigation/navigation_main.cc.o
  /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Localization2DMsg.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Pose2Df.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/navigation.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/navigation/navigation_main.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/navigation.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/navigation/navigation_main.cc

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter
+CMAKE_SOURCE_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/cs393r_starter/build
+CMAKE_BINARY_DIR = /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/shared_library.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/shared_library.dir/flags.make
 
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o: CMakeFiles/shared_library.dir/flags.make
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o: ../src/visualization/visualization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/visualization/visualization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/visualization/visualization.cc
 
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_library.dir/src/visualization/visualization.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/visualization/visualization.cc > CMakeFiles/shared_library.dir/src/visualization/visualization.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/visualization/visualization.cc > CMakeFiles/shared_library.dir/src/visualization/visualization.cc.i
 
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_library.dir/src/visualization/visualization.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/visualization/visualization.cc -o CMakeFiles/shared_library.dir/src/visualization/visualization.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/visualization/visualization.cc -o CMakeFiles/shared_library.dir/src/visualization/visualization.cc.s
 
 CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/shared_library.dir/src/visualization/visualization.cc.o.provides.buil
 
 CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o: CMakeFiles/shared_library.dir/flags.make
 CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o: ../src/vector_map/vector_map.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o -c /u/kelleher/fall2021/cs393r/cs393r_starter/src/vector_map/vector_map.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o -c /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/vector_map/vector_map.cc
 
 CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/cs393r_starter/src/vector_map/vector_map.cc > CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/vector_map/vector_map.cc > CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.i
 
 CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/cs393r_starter/src/vector_map/vector_map.cc -o CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/vector_map/vector_map.cc -o CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.s
 
 CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o.requires:
 
@@ -117,7 +117,7 @@ shared_library_EXTERNAL_OBJECTS =
 ../lib/libshared_library.so: CMakeFiles/shared_library.dir/src/vector_map/vector_map.cc.o
 ../lib/libshared_library.so: CMakeFiles/shared_library.dir/build.make
 ../lib/libshared_library.so: CMakeFiles/shared_library.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../lib/libshared_library.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../lib/libshared_library.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shared_library.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/shared_library.dir/clean:
 .PHONY : CMakeFiles/shared_library.dir/clean
 
 CMakeFiles/shared_library.dir/depend:
-	cd /u/kelleher/fall2021/cs393r/cs393r_starter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build /u/kelleher/fall2021/cs393r/cs393r_starter/build/CMakeFiles/shared_library.dir/DependInfo.cmake --color=$(COLOR)
+	cd /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/CMakeFiles/shared_library.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/shared_library.dir/depend
 

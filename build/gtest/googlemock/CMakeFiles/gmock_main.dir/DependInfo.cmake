@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/src/googletest/googletest/src/gtest-all.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/gtest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
-  "/usr/src/googletest/googlemock/src/gmock-all.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
-  "/usr/src/googletest/googlemock/src/gmock_main.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+  "/usr/src/googletest/googletest/src/gtest-all.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/gtest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
+  "/usr/src/googletest/googlemock/src/gmock-all.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
+  "/usr/src/googletest/googlemock/src/gmock_main.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "GTEST_CREATE_SHARED_LIBRARY=1"
-  "ROS_PACKAGE_NAME=\"cs393r_starter\""
+  "ROS_PACKAGE_NAME=\"cs393r-obstacle-avoidance\""
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/include"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/include"
   "/usr/src/googletest/googlemock/include"
   "/usr/src/googletest/googlemock"
   "/usr/src/googletest/googletest/include"

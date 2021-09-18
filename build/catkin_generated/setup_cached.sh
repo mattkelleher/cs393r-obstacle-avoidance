@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/u/kelleher/fall2021/cs393r/cs393r_starter/build/devel:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES='/u/kelleher/fall2021/cs393r/cs393r_starter/build/devel/share/common-lisp'
-export ROS_PACKAGE_PATH='/u/kelleher/fall2021/cs393r/cs393r_starter:/opt/ros/melodic/share'
+export CMAKE_PREFIX_PATH="/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/devel/share/common-lisp'
+export ROS_PACKAGE_PATH='/u/kelleher/fall2021/cs393r/cs393r_starter:/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance:/opt/ros/melodic/share'

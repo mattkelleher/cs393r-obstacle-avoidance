@@ -1,4 +1,4 @@
-# Install script for directory: /u/kelleher/fall2021/cs393r/cs393r_starter/src/shared
+# Install script for directory: /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

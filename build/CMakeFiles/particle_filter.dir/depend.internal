@@ -14,8 +14,8 @@ CMakeFiles/particle_filter.dir/src/particle_filter/particle_filter.cc.o
  ../src/shared/util/random.h
  ../src/shared/util/timer.h
  ../src/vector_map/vector_map.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/particle_filter/particle_filter.cc
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/particle_filter/particle_filter.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/particle_filter/particle_filter.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/particle_filter/particle_filter.h
 CMakeFiles/particle_filter.dir/src/particle_filter/particle_filter_main.cc.o
  ../src/config_reader/config_reader.h
  ../src/config_reader/lua_script.h
@@ -136,5 +136,5 @@ CMakeFiles/particle_filter.dir/src/particle_filter/particle_filter_main.cc.o
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Point2D.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/Pose2Df.h
  /u/kelleher/amrl_msgs/msg_gen/cpp/include/amrl_msgs/VisualizationMsg.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/particle_filter/particle_filter.h
- /u/kelleher/fall2021/cs393r/cs393r_starter/src/particle_filter/particle_filter_main.cc
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/particle_filter/particle_filter.h
+ /u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/particle_filter/particle_filter_main.cc

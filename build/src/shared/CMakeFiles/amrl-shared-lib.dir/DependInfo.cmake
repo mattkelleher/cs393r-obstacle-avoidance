@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/helpers.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/pthread_utils.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/random.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/terminal_colors.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o"
-  "/u/kelleher/fall2021/cs393r/cs393r_starter/src/shared/util/timer.cc" "/u/kelleher/fall2021/cs393r/cs393r_starter/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/helpers.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/helpers.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/pthread_utils.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/pthread_utils.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/random.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/random.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/terminal_colors.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/terminal_colors.cc.o"
+  "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/src/shared/util/timer.cc" "/u/kelleher/fall2021/cs393r/assignment1/cs393r-obstacle-avoidance/build/src/shared/CMakeFiles/amrl-shared-lib.dir/util/timer.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROS_BUILD_SHARED_LIBS=1"
-  "ROS_PACKAGE_NAME=\"cs393r_starter\""
+  "ROS_PACKAGE_NAME=\"cs393r-obstacle-avoidance\""
   )
 
 # The include file search paths:
