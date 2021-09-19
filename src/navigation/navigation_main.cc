@@ -85,7 +85,6 @@ void LaserCallback(const sensor_msgs::LaserScan& msg) {
   	
   static vector<Vector2f> point_cloud_;
   
-  // TODO Convert the LaserScan to a point cloud
   for(unsigned int i  = 0; i < msg.ranges.size(); i++) {
     double theta = msg.angle_min + i * msg.angle_increment;
     //std:cout << "Point "  << i << " Theta = " << theta << " Radius = " << msg.ranges[i] << "\n"; 

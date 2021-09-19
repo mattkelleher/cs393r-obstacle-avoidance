@@ -61,6 +61,11 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
     robot_angle_(0),
     robot_vel_(0, 0),
     robot_omega_(0),
+    length_(0.4), //TODO
+    width_(0.2),  //TODO
+    wheelbase_(0.35), //TODO
+    trackbase_(0.17), //TODO
+    smargin_(0.1), 
     nav_complete_(true),
     nav_goal_loc_(7, 0),
     nav_goal_angle_(0) {
@@ -131,16 +136,21 @@ void Navigation::Run() {
 
   // If odometry has not been initialized, we can't do anything.
   if (!odom_initialized_) return;
-
+  visualization::DrawCross(nav_goal_loc_, 0.5, 0x1644db, local_viz_msg_);
   // The control iteration goes here. 
   // Feel free to make helper functions to structure the control appropriately.
-   
+  /*for(int curv = 45; curv >= -45; curv -= 5) {
+    float r;
+    float rmin;
+    float rmax;
+    float rmid;
+  }*/
   // The latest observed point cloud is accessible via "point_cloud_"
   //_FindCollision(5);
 
   // Eventually, you will have to set the control values to issue drive commands:
-  drive_msg_.curvature = 0;
-  drive_msg_.velocity = 1;
+  drive_msg_.curvature = -45;
+  drive_msg_.velocity = 2;
 
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();

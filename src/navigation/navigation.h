@@ -94,7 +94,18 @@ class Navigation {
   float odom_start_angle_;
   // Latest observed point cloud.
   std::vector<Eigen::Vector2f> point_cloud_;
-
+  
+  // length of car
+  float length_;
+  // width of car
+  float width_;
+  // wheelbase
+  float wheelbase_;
+  // trackbase
+  float trackbase_;
+  // safety margin
+  float smargin_;
+  
   // Whether navigation is complete.
   bool nav_complete_;
   // Navigation goal location.
