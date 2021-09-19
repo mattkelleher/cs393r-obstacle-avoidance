@@ -61,10 +61,11 @@ class Navigation {
                          double time);
   
   // Finds the first point the car will hit on arc theta
-  int _FindCollision(int r);
+  float _EvalPath(float r);
   // Retruns the score of a moving along a given arc
   int _Score(int freePathLength, Eigen::Vector2f endPoint);
-
+  // Simple 2D distance between two 2D points
+  float _Distance(Eigen::Vector2f p1, Eigen::Vector2f p2);
   // Main function called continously from main
   void Run();
   // Used to set the next target pose.
@@ -94,7 +95,7 @@ class Navigation {
   float odom_start_angle_;
   // Latest observed point cloud.
   std::vector<Eigen::Vector2f> point_cloud_;
-  
+
   // length of car
   float length_;
   // width of car
@@ -105,6 +106,8 @@ class Navigation {
   float trackbase_;
   // safety margin
   float smargin_;
+  // Distance car can travel before first collision
+  float freePathLength_;
   
   // Whether navigation is complete.
   bool nav_complete_;
