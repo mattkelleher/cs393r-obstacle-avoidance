@@ -154,9 +154,9 @@ float Navigation::_EvalPath(float r) {
     //Check if car will collide with point, if so where?
     Vector2f hitPoint(0,2*r);
     float rpoint;
-    float bestrPoint = 0; //TODO delete
-    float testDist = 0; //TODO delete
-    Vector2f bestPOI(0,0); //TODO delete
+    //float bestrPoint = 0; //TODO delete
+    //float testDist = 0; //TODO delete
+    //Vector2f bestPOI(0,0); //TODO delete
     bool hits = false;
     float bestTheta = 180; //angle in degrees we move along this path, if we ever go >180 we are moving bacwards 
     Vector2f pointOfImpact(0,0);
@@ -184,9 +184,9 @@ float Navigation::_EvalPath(float r) {
 	  float theta = 180  / M_PI * acos(1 - (pow(_Distance(pointOfImpact, point), 2) / (2 * pow(rpoint, 2))));
 	  if(theta < bestTheta) {
             bestTheta = theta;
-            bestrPoint = rpoint;
-            bestPOI = pointOfImpact;
-            testDist = _Distance(pointOfImpact, point);
+            //bestrPoint = rpoint;
+            //bestPOI = pointOfImpact;
+            //testDist = _Distance(pointOfImpact, point);
 	    hitPoint.x() = point.x();
             hitPoint.y() = point.y();
 	  }
@@ -196,7 +196,7 @@ float Navigation::_EvalPath(float r) {
     Vector2f endPoint = _Rotate(centerOfTurning, Vector2f(0,0),  bestTheta);
     freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
     visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
-    std::cout << "r " << r << " rpoint " << bestrPoint << " testDist: " << testDist << " bestTheta: " << bestTheta << " hitpoint x: " << hitPoint.x() << " y: " << hitPoint.y() << " pointOfImpact x: " << bestPOI.x() << " y: " << bestPOI.y() << std::endl;
+    //std::cout << "r " << r << " rpoint " << bestrPoint << " testDist: " << testDist << " bestTheta: " << bestTheta << " hitpoint x: " << hitPoint.x() << " y: " << hitPoint.y() << " pointOfImpact x: " << bestPOI.x() << " y: " << bestPOI.y() << std::endl;
     visualization::DrawCross(hitPoint, 0.05, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
     //Point on path that is closest to the goal
     Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
@@ -278,7 +278,7 @@ void Navigation::Run() {
 	return;
   }
   else{
-    drive_msg_.velocity = 0; //TODO change back to 1
+    drive_msg_.velocity = 1; //TODO change back to 1
   }
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
