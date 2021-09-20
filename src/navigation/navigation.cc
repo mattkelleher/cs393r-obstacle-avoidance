@@ -152,7 +152,11 @@ float Navigation::_EvalPath(float r) {
       rmid = _Distance(centerOfTurning, frontRight);
     }
     //Check if car will collide with point, if so where?
-   float rpoint;
+    Vector2f hitPoint(0,2*r);
+    float rpoint;
+    float bestrPoint = 0; //TODO delete
+    float testDist = 0; //TODO delete
+    Vector2f bestPOI(0,0); //TODO delete
     bool hits = false;
     float bestTheta = 180; //angle in degrees we move along this path, if we ever go >180 we are moving bacwards 
     Vector2f pointOfImpact(0,0);
@@ -163,7 +167,7 @@ float Navigation::_EvalPath(float r) {
         if(rpoint >= rmid && rpoint <= rout) { // front of car will hit point
           hits = true;
 	  pointOfImpact.x() = (length_ + wheelbase_) / 2 + smargin_;
-          pointOfImpact.y() = sqrt(pow(rpoint, 2) - pow(pointOfImpact.x(), 2)) + centerOfTurning.y(); 
+          pointOfImpact.y() = (-1 * r/abs(r)) * sqrt(pow(rpoint, 2) - pow(pointOfImpact.x(), 2)) + centerOfTurning.y(); 
 	}
         else if(rpoint >= rin && rpoint < rmid) { // side of car will hit point
           hits = true;
@@ -180,6 +184,11 @@ float Navigation::_EvalPath(float r) {
 	  float theta = 180  / M_PI * acos(1 - (pow(_Distance(pointOfImpact, point), 2) / (2 * pow(rpoint, 2))));
 	  if(theta < bestTheta) {
             bestTheta = theta;
+            bestrPoint = rpoint;
+            bestPOI = pointOfImpact;
+            testDist = _Distance(pointOfImpact, point);
+	    hitPoint.x() = point.x();
+            hitPoint.y() = point.y();
 	  }
         }
       }
@@ -187,6 +196,8 @@ float Navigation::_EvalPath(float r) {
     Vector2f endPoint = _Rotate(centerOfTurning, Vector2f(0,0),  bestTheta);
     freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
     visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
+    std::cout << "r " << r << " rpoint " << bestrPoint << " testDist: " << testDist << " bestTheta: " << bestTheta << " hitpoint x: " << hitPoint.x() << " y: " << hitPoint.y() << " pointOfImpact x: " << bestPOI.x() << " y: " << bestPOI.y() << std::endl;
+    visualization::DrawCross(hitPoint, 0.05, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
     //Point on path that is closest to the goal
     Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
     visualization::DrawCross(closestPoint, 0.1, 0xc80c0c, local_viz_msg_); //red = closest point on arc to curve
@@ -200,8 +211,8 @@ float Navigation::_EvalPath(float r) {
 
 Vector2f Navigation::_Rotate(Vector2f center, Vector2f point, float theta) {
   Vector2f newPoint(0,0);
-  if(center.y() > 0) { //we want to rotate ccw, rotating cw by 360-x degrees = ccw rotation of x degrees
-    theta = 270 - theta;
+  if(center.y() < 0) { //we want to rotate ccw, rotating cw by 360-x degrees = ccw rotation of x degrees
+    theta *= -1;
   }
   theta = theta * M_PI / 180;
   float s = sin(theta);
@@ -267,7 +278,7 @@ void Navigation::Run() {
 	return;
   }
   else{
-    drive_msg_.velocity = 1;
+    drive_msg_.velocity = 0; //TODO change back to 1
   }
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
