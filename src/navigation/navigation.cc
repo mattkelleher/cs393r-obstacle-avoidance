@@ -262,8 +262,10 @@ void Navigation::Run() {
   // Eventually, you will have to set the control values to issue drive commands:
   drive_msg_.curvature = bestCurv;
   //TODO Check to see if we have enough space or if we need to break
-  drive_msg_.velocity = 1;
-  
+  if(freePathLength_ < 0.3){
+  	drive_msg_.velocity = 0;
+	return;
+  }
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
   global_viz_msg_.header.stamp = ros::Time::now();
