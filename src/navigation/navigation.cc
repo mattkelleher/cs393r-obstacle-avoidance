@@ -235,7 +235,10 @@ Vector2f Navigation::_findClosestPoint(Vector2f center, float r, Vector2f goal) 
 
 float Navigation::_Score(Vector2f endPoint) { 
   // TODO potentially add hyperparameter to navigation class to weight score
-  return _Distance(Vector2f(0,0), endPoint) - 0.5 * _Distance(endPoint, nav_goal_loc_);
+  if(freePathLength_ < 0.3) {
+    return -30;
+  }
+  return _Distance(Vector2f(0,0), endPoint) - 0.25 * _Distance(endPoint, nav_goal_loc_);
 }
 
 void Navigation::Run() {
@@ -252,10 +255,12 @@ void Navigation::Run() {
   // Feel free to make helper functions to structure the control appropriately.
   float bestScore = -30;
   float bestCurv = 0;
-  float score;
-  for(float curv = 45; curv >= -45; curv -= 5) {
+  float score = 0;
+  freePathLength_ = 5;
+  for(float curv = 45; curv >= -45; curv -= 1) {
     if(curv == 0) {
       score = _EvalPath(0);
+      std::cout << "Curv: 0 Score: " << score << std::endl;
     }
     else{
       float r = wheelbase_ / tan(M_PI / 180 * curv);
@@ -266,7 +271,7 @@ void Navigation::Run() {
       bestCurv = curv;
     }
   }
-  visualization::DrawPathOption(bestCurv, freePathLength_, 0.1, local_viz_msg_);
+  visualization::DrawPathOption(bestCurv, freePathLength_, width_ / 2 + smargin_, local_viz_msg_);
 
   // The latest observed point cloud is accessible via "point_cloud_"
 
@@ -280,6 +285,8 @@ void Navigation::Run() {
   else{
     drive_msg_.velocity = 1; //TODO change back to 1
   }
+  std::cout << "Best curv: " << bestCurv << " Score: " << bestScore << std::endl;
+
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
   global_viz_msg_.header.stamp = ros::Time::now();
