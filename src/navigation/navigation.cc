@@ -235,10 +235,10 @@ Vector2f Navigation::_findClosestPoint(Vector2f center, float r, Vector2f goal) 
 
 float Navigation::_Score(Vector2f endPoint) { 
   // TODO potentially add hyperparameter to navigation class to weight score
-  if(freePathLength_ < 0.3) {
+  if(freePathLength_ < 0.3) { //We really dont like paths that will cause us to stop, TODO change 0.3 to parameter, "laency adjust" or something
     return -30;
   }
-  return _Distance(Vector2f(0,0), endPoint) - 0.25 * _Distance(endPoint, nav_goal_loc_);
+  return _Distance(Vector2f(0,0), endPoint) - 0.5 * _Distance(endPoint, nav_goal_loc_);
 }
 
 void Navigation::Run() {
@@ -257,7 +257,8 @@ void Navigation::Run() {
   float bestCurv = 0;
   float score = 0;
   freePathLength_ = 5;
-  for(float curv = 45; curv >= -45; curv -= 1) {
+  float currFreePathLength = 0;
+  for(float curv = 60; curv >= -60; curv -= 2) {
     if(curv == 0) {
       score = _EvalPath(0);
       std::cout << "Curv: 0 Score: " << score << std::endl;
@@ -269,6 +270,7 @@ void Navigation::Run() {
     if(score > bestScore){
       bestScore = score;
       bestCurv = curv;
+      currFreePathLength = freePathLength_;
     }
   }
   visualization::DrawPathOption(bestCurv, freePathLength_, width_ / 2 + smargin_, local_viz_msg_);
@@ -277,16 +279,14 @@ void Navigation::Run() {
 
   // Eventually, you will have to set the control values to issue drive commands:
   drive_msg_.curvature = bestCurv;
+  std::cout << "Best curv: " << bestCurv << " Score: " << bestScore << std::endl;
   //TODO Check to see if we have enough space or if we need to break
-  if(freePathLength_ < 0.3){
+  if(currFreePathLength < 0.3){
   	drive_msg_.velocity = 0;
-	nav_complete = false;
-	return;
   }
   else{
     drive_msg_.velocity = 1; //TODO change back to 1
   }
-  std::cout << "Best curv: " << bestCurv << " Score: " << bestScore << std::endl;
 
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
