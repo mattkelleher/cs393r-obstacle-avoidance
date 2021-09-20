@@ -68,7 +68,7 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
     smargin_(0.1),
     freePathLength_(0),	
     nav_complete_(true),
-    nav_goal_loc_(7, 0),
+    nav_goal_loc_(5, 0),
     nav_goal_angle_(0) {
   drive_pub_ = n->advertise<AckermannCurvatureDriveMsg>(
       "ackermann_curvature_drive", 1);
@@ -119,37 +119,47 @@ float Navigation::_Distance(Vector2f p1, Vector2f p2) {
 }
 
 float Navigation::_EvalPath(float r) {
-    float rin = 0;
-    float rout = 0;
-    float rmid = 0;;
-    Vector2f centerOfTurning(0, r);
-    Vector2f frontLeft((length_ + wheelbase_) / 2 + smargin_, width_ / 2 + smargin_);
-    Vector2f frontRight((length_ + wheelbase_) / 2 + smargin_, -1 * width_ / 2 - smargin_);
+  float rin = 0;
+  float rout = 0;
+  float rmid = 0;
+  Vector2f centerOfTurning(0, r);
+  Vector2f frontLeft((length_ + wheelbase_) / 2 + smargin_, width_ / 2 + smargin_);
+  Vector2f frontRight((length_ + wheelbase_) / 2 + smargin_, -1 * width_ / 2 - smargin_);
 
-    if(r == 0) { //special case, car moving forward will always hit front (+- width/2 + smargin)
-      //TODO      
+  if(r == 0) { //special case, car moving forward will always hit front (+- width/2 + smargin)
+    freePathLength_ = _Distance(Vector2f(0,0), nav_goal_loc_); 
+    for(auto point: point_cloud_) {
+      if((point.y() <= width_ / 2.0 + smargin_) && (point.y() >= -1.0 * width_ / 2.0  - smargin_)) { // car will collide with this point
+        float dist = point.x() - ((length_ + wheelbase_) / 2 + smargin_);
+        if(dist  < freePathLength_) {
+          freePathLength_ = dist;
+	} 
+      }
     }
+    Vector2f endpoint(freePathLength_, 0);
+    return _Score(endpoint);      
+  }
+  else{
+    visualization::DrawArc(centerOfTurning, abs(r), -M_PI, M_PI, 0x1644db, local_viz_msg_);
     if(r > 0) {  //turning left, front left corner is middle radius, front right corner is outer radius
       rin = _Distance(centerOfTurning, Vector2f(0, width_ / 2 + smargin_));
       rout = _Distance(centerOfTurning, frontRight);
-      rmid = _Distance(centerOfTurning, frontLeft);
-  
+      rmid = _Distance(centerOfTurning, frontLeft); 
     }
     else if(r < 0){ //turning right, front left corner is outer radius, front right corner is middle radius 
       rin = _Distance(centerOfTurning, Vector2f(0, -1 * width_ / 2 - smargin_));
       rout = _Distance(centerOfTurning, frontLeft);
       rmid = _Distance(centerOfTurning, frontRight);
     }
-    
     //Check if car will collide with point, if so where?
-    float rpoint;
+   float rpoint;
     bool hits = false;
-    float bestTheta = 360; //angle in degrees we move along this path 
+    float bestTheta = 180; //angle in degrees we move along this path, if we ever go >180 we are moving bacwards 
     Vector2f pointOfImpact(0,0);
     for(auto point: point_cloud_) {
       hits = false;
       if(point.x() >= 0) { //we are not worried about points behind us //TODO this MAY not be true for future assignments
-	rpoint = _Distance(centerOfTurning, point);
+        rpoint = _Distance(centerOfTurning, point);
         if(rpoint >= rmid && rpoint <= rout) { // front of car will hit point
           hits = true;
 	  pointOfImpact.x() = (length_ + wheelbase_) / 2 + smargin_;
@@ -157,7 +167,7 @@ float Navigation::_EvalPath(float r) {
 	}
         else if(rpoint >= rin && rpoint < rmid) { // side of car will hit point
           hits = true;
-	  if(r > 0) {
+          if(r > 0) {
 	    pointOfImpact.y() = width_ / 2 + smargin_;
 	  }
 	  else if(r < 0) {
@@ -166,25 +176,55 @@ float Navigation::_EvalPath(float r) {
 	  pointOfImpact.x() = sqrt(pow(rpoint, 2) - pow((pointOfImpact.y() - centerOfTurning.y()) , 2));
         }
         if(hits) {
-         // Calculate theta, if theta < curr best theta
-	 float theta = 0;
-	 if(theta < bestTheta) {
-           bestTheta = theta;
-	 }
-	 //freePathLength = _Distance(Vector2f(0,0), endPoint); //TODO calculate endpoint 
+          // Calculate theta, if theta < curr best theta
+	  float theta = 180  / M_PI * acos(1 - (pow(_Distance(pointOfImpact, point), 2) / (2 * pow(rpoint, 2))));
+	  if(theta < bestTheta) {
+            bestTheta = theta;
+	  }
         }
       }
     }
+    Vector2f endPoint = _Rotate(centerOfTurning, Vector2f(0,0),  bestTheta);
+    freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
 
-    //TODO is max path length better or should we stop early at point closest to goal on arc?
-  return 1; //TODO return _Score(xx)
+    //Point on path that is closest to the goal
+    Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
+
+    if(abs(closestPoint.y()) < abs(endPoint.y())){
+      endPoint = closestPoint;
+    }
+    visualization::DrawCross(endPoint, 0.1, 0x1644db, local_viz_msg_);
+    return _Score(endPoint);
+  }
 }
 
-int Navigation::_Score(int freePathLength, Vector2f endPoint) { //TODO re write
+Vector2f Navigation::_Rotate(Vector2f center, Vector2f point, float theta) {
+  Vector2f newPoint(0,0);
+//  if(center.y() > 0) { //we want to rotate ccw, rotating cw by 360-x degrees = ccw rotation of x degrees
+//    theta = 360 - theta;
+//  }
+  theta = theta * M_PI / 180;
+  float s = sin(theta);
+  float c = cos(theta);
+  
+  //Rotate clockwise
+  newPoint.x() = c * (point.x() - center.x()) - s * (point.y() - center.y()) + center.x();
+  newPoint.y() = s * (point.x() - center.x()) + c * (point.y() - center.y()) + center.y();
+
+  return newPoint;
+}
+
+Vector2f Navigation::_findClosestPoint(Vector2f center, float r, Vector2f goal) {
+  Vector2f closestPoint(0,0);
+  float dist = _Distance(goal, center);
+  closestPoint.x() = (goal.x() - center.x()) / dist * r + center.x();
+  closestPoint.y() = (goal.y() - center.y()) / dist * r + center.y();
+  return closestPoint;
+}
+
+float Navigation::_Score(Vector2f endPoint) { 
   // TODO potentially add hyperparameter to navigation class to weight score
-  return _Distance(Vector2f(0,0), endPoint) - _Distance(endPoint, nav_goal_loc_);
-  //return freePathLength - sqrt(pow(endPoint.x() - nav_goal_loc_.x(), 2)
-  //	       + pow(endPoint.y() - nav_goal_loc_.y(), 2)); 
+  return _Distance(Vector2f(0,0), endPoint) - 0.5 * _Distance(endPoint, nav_goal_loc_);
 }
 
 void Navigation::Run() {
@@ -199,7 +239,7 @@ void Navigation::Run() {
   visualization::DrawCross(nav_goal_loc_, 0.5, 0x1644db, local_viz_msg_);
   // The control iteration goes here. 
   // Feel free to make helper functions to structure the control appropriately.
-  float bestScore = 0;
+  float bestScore = -30;
   float bestCurv = 0;
   float score;
   for(float curv = 45; curv >= -45; curv -= 5) {
@@ -215,11 +255,12 @@ void Navigation::Run() {
       bestCurv = curv;
     }
   }
+  visualization::DrawPathOption(bestCurv, freePathLength_, 0.1, local_viz_msg_);
+
   // The latest observed point cloud is accessible via "point_cloud_"
 
   // Eventually, you will have to set the control values to issue drive commands:
   drive_msg_.curvature = bestCurv;
-  
   //TODO Check to see if we have enough space or if we need to break
   drive_msg_.velocity = 1;
   

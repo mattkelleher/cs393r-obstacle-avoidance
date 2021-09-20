@@ -63,9 +63,13 @@ class Navigation {
   // Finds the first point the car will hit on arc theta
   float _EvalPath(float r);
   // Retruns the score of a moving along a given arc
-  int _Score(int freePathLength, Eigen::Vector2f endPoint);
+  float _Score(Eigen::Vector2f endPoint);
   // Simple 2D distance between two 2D points
   float _Distance(Eigen::Vector2f p1, Eigen::Vector2f p2);
+  // Rotate point theta degrees around center
+  Eigen::Vector2f _Rotate(Eigen::Vector2f center, Eigen::Vector2f point, float theta);
+  // Find point on circle centered at center with radius r closest to point 'goal'
+  Eigen::Vector2f _findClosestPoint(Eigen::Vector2f center, float r, Eigen::Vector2f goal);
   // Main function called continously from main
   void Run();
   // Used to set the next target pose.
