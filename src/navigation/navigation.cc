@@ -61,10 +61,10 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
     robot_angle_(0),
     robot_vel_(0, 0),
     robot_omega_(0),
-    length_(0.4), //TODO
-    width_(0.2),  //TODO
-    wheelbase_(0.35), //TODO
-    trackbase_(0.17), //TODO
+    length_(0.51), 
+    width_(0.27),  
+    wheelbase_(0.33), 
+    trackbase_(0.23), 
     smargin_(0.1),
     freePathLength_(0),	
     nav_complete_(true),
@@ -186,23 +186,23 @@ float Navigation::_EvalPath(float r) {
     }
     Vector2f endPoint = _Rotate(centerOfTurning, Vector2f(0,0),  bestTheta);
     freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
-
+    visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
     //Point on path that is closest to the goal
     Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
-
+    visualization::DrawCross(closestPoint, 0.1, 0xc80c0c, local_viz_msg_); //red = closest point on arc to curve
     if(abs(closestPoint.y()) < abs(endPoint.y())){
       endPoint = closestPoint;
     }
-    visualization::DrawCross(endPoint, 0.1, 0x1644db, local_viz_msg_);
+    visualization::DrawCross(endPoint, 0.05, 0x1644db, local_viz_msg_); //blue = chosen path length aka best path
     return _Score(endPoint);
   }
 }
 
 Vector2f Navigation::_Rotate(Vector2f center, Vector2f point, float theta) {
   Vector2f newPoint(0,0);
-//  if(center.y() > 0) { //we want to rotate ccw, rotating cw by 360-x degrees = ccw rotation of x degrees
-//    theta = 360 - theta;
-//  }
+  if(center.y() > 0) { //we want to rotate ccw, rotating cw by 360-x degrees = ccw rotation of x degrees
+    theta = 270 - theta;
+  }
   theta = theta * M_PI / 180;
   float s = sin(theta);
   float c = cos(theta);
@@ -217,8 +217,8 @@ Vector2f Navigation::_Rotate(Vector2f center, Vector2f point, float theta) {
 Vector2f Navigation::_findClosestPoint(Vector2f center, float r, Vector2f goal) {
   Vector2f closestPoint(0,0);
   float dist = _Distance(goal, center);
-  closestPoint.x() = (goal.x() - center.x()) / dist * r + center.x();
-  closestPoint.y() = (goal.y() - center.y()) / dist * r + center.y();
+  closestPoint.x() = (goal.x() - center.x()) / dist * abs(r) + center.x();
+  closestPoint.y() = (goal.y() - center.y()) / dist * abs(r) + center.y();
   return closestPoint;
 }
 
@@ -265,6 +265,9 @@ void Navigation::Run() {
   if(freePathLength_ < 0.3){
   	drive_msg_.velocity = 0;
 	return;
+  }
+  else{
+    drive_msg_.velocity = 1;
   }
   // Add timestamps to all messages.
   local_viz_msg_.header.stamp = ros::Time::now();
