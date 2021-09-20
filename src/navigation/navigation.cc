@@ -280,6 +280,7 @@ void Navigation::Run() {
   //TODO Check to see if we have enough space or if we need to break
   if(freePathLength_ < 0.3){
   	drive_msg_.velocity = 0;
+	nav_complete = false;
 	return;
   }
   else{
