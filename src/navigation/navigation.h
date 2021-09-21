@@ -70,6 +70,8 @@ class Navigation {
   Eigen::Vector2f _Rotate(Eigen::Vector2f center, Eigen::Vector2f point, float theta);
   // Find point on circle centered at center with radius r closest to point 'goal'
   Eigen::Vector2f _findClosestPoint(Eigen::Vector2f center, float r, Eigen::Vector2f goal);
+  // Draws car in visulalizer
+  void _DrawCar();
   // Main function called continously from main
   void Run();
   // Used to set the next target pose.
@@ -112,7 +114,11 @@ class Navigation {
   float smargin_;
   // Distance car can travel before first collision
   float freePathLength_;
-  
+  // Previous odom angle
+  float prevOdomAngle_;
+  //Previous odom location
+  Eigen::Vector2f prevOdomLoc_;
+
   // Whether navigation is complete.
   bool nav_complete_;
   // Navigation goal location.
