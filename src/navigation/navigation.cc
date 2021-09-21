@@ -140,7 +140,7 @@ float Navigation::_EvalPath(float r) {
     return _Score(endpoint);      
   }
   else{
-    visualization::DrawArc(centerOfTurning, abs(r), -M_PI, M_PI, 0x1644db, local_viz_msg_);
+    //visualization::DrawArc(centerOfTurning, abs(r), -M_PI, M_PI, 0x1644db, local_viz_msg_);
     if(r > 0) {  //turning left, front left corner is middle radius, front right corner is outer radius
       rin = _Distance(centerOfTurning, Vector2f(0, width_ / 2 + smargin_));
       rout = _Distance(centerOfTurning, frontRight);
@@ -197,7 +197,7 @@ float Navigation::_EvalPath(float r) {
     freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
     visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
     //std::cout << "r " << r << " rpoint " << bestrPoint << " testDist: " << testDist << " bestTheta: " << bestTheta << " hitpoint x: " << hitPoint.x() << " y: " << hitPoint.y() << " pointOfImpact x: " << bestPOI.x() << " y: " << bestPOI.y() << std::endl;
-    visualization::DrawCross(hitPoint, 0.05, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
+    visualization::DrawCross(hitPoint, 0.2, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
     //Point on path that is closest to the goal
     Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
     visualization::DrawCross(closestPoint, 0.1, 0xc80c0c, local_viz_msg_); //red = closest point on arc to curve
