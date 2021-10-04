@@ -124,10 +124,60 @@ void ParticleFilter::Update(const vector<float>& ranges,
   // observations for each particle, and assign weights to the particles based
   // on the observation likelihood computed by relating the observation to the
   // predicted point cloud.
+//  //need to be renamed 
+//  float sigma = 0.04;
+//  //tunable
+//  float d_long = 1;
+//  //tunable
+//  float gamma = 1;
+//  float num_range = 109;
+//  //is num_range 109?
+//  log_weights = num_range * ()
+//  int index_counter_i = 0;
+//  for(Particle i : particles_){
+//    vector<Vector2f> scan = i.GetPredictedPointCloud();
+//    int index_counter_n = 0;
+//    for(n : scan){
+//      if(n < range_min or n > range_max){
+//        
+//      }
+//      if(
+//      index_counter_n ++;
+//    }
+//  }
 }
 
 void ParticleFilter::Resample() {
-  // Resample the particles, proportional to their weights.
+//  float cummulative_weight [50];
+//  vector<Particle> new_particles;
+//  int index_counter1 = 0;
+//  for(Particle i: particles_){
+//    if(index_counter1 == 0){
+//      cumulative_weight[index_counter] = i.weight;
+//    } else {
+//      cumulative_weight[index_counter] = i.weight + cumulative_weight[index_counter-1];
+//    }
+//    index_count1 ++; 
+//  }
+//  for(Particle i : particles_){
+//    float x = rng_.UniformRandom(0, 1);
+//    float rand;
+//    //not sure about the normalized weight
+//    rand = x * cumulative_weight[49];
+//    int index_counter2 = 0;
+//    for(float j : cumulative_weight){
+//      if(rand <= j){
+//	break;
+//      }
+//      index_counter2 ++;
+//    }
+//    new_particles.push_back(particles_[index_counter2];
+//  }
+//  particles_ = new_particle_filter;
+//  for(Particle i : particles_){
+//    i.weight = 1/50;
+//  }
+//  // Resample the particles, proportional to their weights.
   // The current particles are in the `particles_` variable. 
   // Create a variable to store the new particles, and when done, replace the
   // old set of particles:
