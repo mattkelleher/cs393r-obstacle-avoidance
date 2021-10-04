@@ -84,7 +84,9 @@ void LaserCallback(const sensor_msgs::LaserScan& msg) {
   const Vector2f kLaserLoc(0.2, 0);
   	
   static vector<Vector2f> point_cloud_;
-  
+  while(point_cloud_.size() > 0) {
+    point_cloud_.pop_back();
+  }
   for(unsigned int i  = 0; i < msg.ranges.size(); i++) {
     double theta = msg.angle_min + i * msg.angle_increment;
     //std:cout << "Point "  << i << " Theta = " << theta << " Radius = " << msg.ranges[i] << "\n"; 

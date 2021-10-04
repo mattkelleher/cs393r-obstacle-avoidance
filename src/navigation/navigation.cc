@@ -65,10 +65,12 @@ Navigation::Navigation(const string& map_file, ros::NodeHandle* n) :
     width_(0.27),  
     wheelbase_(0.33), 
     trackbase_(0.23), 
-    smargin_(0.1),
-    freePathLength_(0),	
+    smargin_(0.02),
+    freePathLength_(0),
+    prevOdomAngle_(0),
+    prevOdomLoc_(0,0),	
     nav_complete_(true),
-    nav_goal_loc_(5, 0),
+    nav_goal_loc_(3, 0),
     nav_goal_angle_(0) {
   drive_pub_ = n->advertise<AckermannCurvatureDriveMsg>(
       "ackermann_curvature_drive", 1);
@@ -195,9 +197,10 @@ float Navigation::_EvalPath(float r) {
     }
     Vector2f endPoint = _Rotate(centerOfTurning, Vector2f(0,0),  bestTheta);
     freePathLength_ = _Distance(Vector2f(0,0), endPoint); //max distance we can move on this path before we hit something, if we will never hit anything this is max distance we can move 
-    visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
-    //std::cout << "r " << r << " rpoint " << bestrPoint << " testDist: " << testDist << " bestTheta: " << bestTheta << " hitpoint x: " << hitPoint.x() << " y: " << hitPoint.y() << " pointOfImpact x: " << bestPOI.x() << " y: " << bestPOI.y() << std::endl;
-    visualization::DrawCross(hitPoint, 0.2, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
+    if(r < 0) {
+      visualization::DrawCross(endPoint, 0.1, 0x087d4d, local_viz_msg_); //green = free path length
+      visualization::DrawCross(hitPoint, 0.2, 0xfcba03, local_viz_msg_); //orange, first point that will be hit on path
+    }
     //Point on path that is closest to the goal
     Vector2f closestPoint = _findClosestPoint(centerOfTurning, r, nav_goal_loc_);
     visualization::DrawCross(closestPoint, 0.1, 0xc80c0c, local_viz_msg_); //red = closest point on arc to curve
@@ -235,11 +238,22 @@ Vector2f Navigation::_findClosestPoint(Vector2f center, float r, Vector2f goal) 
 
 float Navigation::_Score(Vector2f endPoint) { 
   // TODO potentially add hyperparameter to navigation class to weight score
-  if(freePathLength_ < 0.3) { //We really dont like paths that will cause us to stop, TODO change 0.3 to parameter, "laency adjust" or something
+  if(freePathLength_ < smargin_) { //We really dont like paths that will cause us to stop, TODO change 0.3 to parameter, "laency adjust" or something
     return -30;
   }
-  return _Distance(Vector2f(0,0), endPoint) - 0.5 * _Distance(endPoint, nav_goal_loc_);
+  return _Distance(Vector2f(0,0), endPoint) - 0.40 * _Distance(endPoint, nav_goal_loc_);
 }
+
+/*void Navigantion::_DrawCar() {
+  Vector2f frontRight((length_+wheelbase_)/2+smargin_, -1*width_/2-smargin_);
+  Vector2f frontLeft((length_+wheelbase_)/2+smargin_, width_/2+smargin_);
+  Vector2f backRight(-(length_-wheelbase_)/2-smargin_, -1*width_/2-smargin_);
+  Vector2f backLeft(-(length_-wheelbase_)/2-smargin_, width_/2+smargin_);
+  visualization::DrawLine(frontRight, backRight, 0x09f7e8, local_viz_msg_); 
+  visualization::DrawLine(frontRight, frontLeft, 0x09f7e8, local_viz_msg_); 
+  visualization::DrawLine(frontLeft, backLeft, 0x09f7e8, local_viz_msg_); 
+  visualization::DrawLine(backLeft, backRight, 0x09f7e8, local_viz_msg_); 
+}*/
 
 void Navigation::Run() {
   // This function gets called 20 times a second to form the control loop.
@@ -247,10 +261,31 @@ void Navigation::Run() {
   // Clear previous visualizations.
   visualization::ClearVisualizationMsg(local_viz_msg_);
   visualization::ClearVisualizationMsg(global_viz_msg_);
-
+  //_DrawCar();
+  //std::cout << "robot_loc_: " << odom_loc_ << " Robot angle: " << odom_angle_ << std::endl;
   // If odometry has not been initialized, we can't do anything.
   if (!odom_initialized_) return;
   visualization::DrawCross(nav_goal_loc_, 0.5, 0x1644db, local_viz_msg_);
+  
+  if((prevOdomAngle_ == 0) && prevOdomLoc_.x() == 0 && prevOdomLoc_.y() == 0){
+    prevOdomAngle_ = odom_angle_;
+    prevOdomLoc_ = odom_loc_;
+  }
+  else {
+    float angleDiff = odom_angle_ - prevOdomAngle_;
+    float dist = 3 * _Distance(odom_loc_, prevOdomLoc_);
+    prevOdomLoc_ = odom_loc_;
+    prevOdomAngle_ = odom_angle_;
+    
+    float c = cos(angleDiff);
+    float s = sin(angleDiff);
+
+    for(auto point: point_cloud_) {
+      point.x() = point.x() * c - point.y() * s + dist;
+      point.y() = point.x() * s + point.y() * c;  
+    }
+  }
+
   // The control iteration goes here. 
   // Feel free to make helper functions to structure the control appropriately.
   float bestScore = -30;
@@ -258,10 +293,10 @@ void Navigation::Run() {
   float score = 0;
   freePathLength_ = 5;
   float currFreePathLength = 0;
-  for(float curv = 60; curv >= -60; curv -= 2) {
+  for(float curv = 60; curv >= -60; curv -= 1) {
     if(curv == 0) {
       score = _EvalPath(0);
-      std::cout << "Curv: 0 Score: " << score << std::endl;
+      //std::cout << "Curv: 0 Score: " << score << std::endl;
     }
     else{
       float r = wheelbase_ / tan(M_PI / 180 * curv);
@@ -274,12 +309,11 @@ void Navigation::Run() {
     }
   }
   visualization::DrawPathOption(bestCurv, freePathLength_, width_ / 2 + smargin_, local_viz_msg_);
-
+  
   // The latest observed point cloud is accessible via "point_cloud_"
 
   // Eventually, you will have to set the control values to issue drive commands:
   drive_msg_.curvature = bestCurv;
-  std::cout << "Best curv: " << bestCurv << " Score: " << bestScore << std::endl;
   //TODO Check to see if we have enough space or if we need to break
   if(currFreePathLength < 0.3){
   	drive_msg_.velocity = 0;
